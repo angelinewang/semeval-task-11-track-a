@@ -1,9 +1,4 @@
-# semeval-task-11-track-b
-
-Paths to git ignored dataset files
-./public_data
-./public_data/dev
-./public_data/train
+/Users/angwang/semeval-task-11-track-b/results/baseline_results.csv_2024-12-10 19:06:53
 
 Baseline results on validation:
 
