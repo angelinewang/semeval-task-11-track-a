@@ -5,15 +5,21 @@ Paths to git ignored dataset files
 ./public_data/dev
 ./public_data/train
 
-Baseline results on validation:
-
-Your results for eng track A are:
+#### Baseline results on validation:
 
 Multi-label accuracy (Jaccard score): 0.3235632183908046
 
 Micro F1 score: 0.4513274336283186
 
 Macro F1 score: 0.38416706699765263
+
+#### So far, our best performing model is alt4_3 for at Epoch 100:
+
+Multi-label accuracy (Jaccard score): 0.3464080459770116
+
+Micro F1 score: 0.4896551724137931
+
+Macro F1 score: 0.4452320985690972
 
 ## Relevancy of Metrics
 
@@ -22,3 +28,26 @@ Macro F1 score: 0.38416706699765263
 - If you are evaluating overall performance without concern for class imbalance, Micro F1 is a good choice.
 
 Thus the best metric for this task would be Macro F1(to provide a fair assessment for each emoticon class and to handle imbalances in data) and Jaccard Index (to handle multi-label classification (i.e. in cases when a single instance can belong to multiple emotions simultaneously))
+
+Epoch 4: 6-1-24
+
+F1 score: micro=0.44985673352435523, macro=0.4323589740292243
+
+Emotion-level macro F1 scores:
+anger: 0.2314
+fear: 0.6667
+joy: 0.3784
+sadness: 0.4636
+surprise: 0.4218
+
+## To Add:
+-ModernBERT
+-Adersarial Training 
+
+public_data
+--> Original dataset
+
+public_data_dev: Released on the 31st of December
+--> Updated dataset, with the same data but ids may have changed due to processing
+
+test set will be released on teh 15th of January and the test phase ends on the 28th of January 
