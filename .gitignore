@@ -1,2 +1,11 @@
 /public_data
 /.idea
+
+/val/3-1-25/net_epoch_0.pth
+/val/24-12-24/net_epoch_100.pth
+/val/24-12-24/net_epoch_200.pth
+/val/3-1-25/net_epoch_1.pth
+/val/3-1-25/net_epoch_2.pth
+/val/3-1-25/net_epoch_3.pth
+/val/3-1-25/net_epoch_4.pth
+/val/24-12-24/net_epoch_0.pth
