@@ -1,4 +1,4 @@
-# semeval-task-11-track-b
+# semeval-task-11-track-a
 
 Paths to git ignored dataset files
 ./public_data
