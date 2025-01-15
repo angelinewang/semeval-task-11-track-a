@@ -1,6 +1,6 @@
 /public_data
 /.idea
-
+/public_data_test
 /val/3-1-25/net_epoch_0_too_large.pth
 /val/24-12-24/net_epoch_100_too_large.pth
 /val/24-12-24/net_epoch_200_too_large.pth
