@@ -51,3 +51,18 @@ public_data_dev: Released on the 31st of December
 --> Updated dataset, with the same data but ids may have changed due to processing
 
 test set will be released on teh 15th of January and the test phase ends on the 28th of January 
+
+## 30 Jan: Best Performance from Simple-BERT-EMO:
+Validation Set Performance:
+              precision    recall  f1-score   support
+
+         joy       0.56      0.71      0.63        31
+     sadness       0.47      0.77      0.59        35
+    surprise       0.36      0.77      0.49        31
+        fear       0.55      1.00      0.71        63
+       anger       0.35      0.69      0.47        16
+
+   micro avg       0.48      0.84      0.61       176
+   macro avg       0.46      0.79      0.58       176
+weighted avg       0.49      0.84      0.61       176
+ samples avg       0.51      0.77      0.58       176
