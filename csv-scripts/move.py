@@ -1,7 +1,7 @@
 import csv
 
-input_file = './results/track_a/pred_eng_new1.csv'
-output_file = './results/track_a/pred_eng_new2.csv'
+input_file = '../results/track_a/pred_eng_new1.csv'
+output_file = '../results/track_a/pred_eng_new2.csv'
 
 with open(input_file, 'r', newline='', encoding='utf-8') as fin, \
      open(output_file, 'w', newline='', encoding='utf-8') as fout:
