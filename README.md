@@ -1,4 +1,7 @@
-# semeval-task-11-track-b
+# SemEval Task 11 Track A English 2025 
+
+### Task Description
+Multi-label emotion classification: Anger, Fear, Joy, Sadness, Surprise
 
 Paths to git ignored dataset files
 ./public_data
@@ -8,12 +11,49 @@ Paths to git ignored dataset files
 #### Baseline results on validation:
 
 Multi-label accuracy (Jaccard score): 0.3235632183908046
-
 Micro F1 score: 0.4513274336283186
-
 Macro F1 score: 0.38416706699765263
 
-#### So far, our best performing model is alt4_3 for at Epoch 100:
+#### Final Best Performing Model on Test Set: /Users/angwang/semeval-task-11-track-b/test/thres-emolex-BERT-EMO.ipynb
+1. Dynamic Thresholds for each emotion
+2. Emotion BERT Features
+3. Emotion Lexicon Features
+4. Enhanced Data Preprocessing
+
+Evaluation scores for eng track a:
+
+F1 score: micro=0.6199597841041379, macro=0.5523447943188394
+
+Emotion-level macro F1 scores:
+anger: 0.3597
+fear: 0.7426
+joy: 0.5248
+sadness: 0.5489
+surprise: 0.5857
+
+On the Development Set, this model achieves:
+
+              precision    recall  f1-score   support
+
+         joy       0.71      0.48      0.58        31
+     sadness       0.75      0.69      0.72        35
+    surprise       0.45      0.81      0.58        31
+        fear       0.61      0.98      0.76        63
+       anger       0.57      0.50      0.53        16
+
+   micro avg       0.60      0.76      0.67       176
+   macro avg       0.62      0.69      0.63       176
+weighted avg       0.63      0.76      0.67       176
+ samples avg       0.59      0.69      0.61       176
+
+Per-emotion performance at best thresholds:
+joy: F1 = 0.577
+sadness: F1 = 0.716
+surprise: F1 = 0.581
+fear: F1 = 0.756
+anger: F1 = 0.533
+
+#### Our initial best performing model is alt4_3 for at Epoch 100 for the validation set:
 
 Multi-label accuracy (Jaccard score): 0.3464080459770116
 
