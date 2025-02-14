@@ -1,0 +1,50 @@
+Emotion: joy
+Train BERT Shape: (2768, 5)
+Val BERT Shape: (116, 5)
+Test BERT Shape: (2767, 5)
+Emotion: sadness
+Train BERT Shape: (2768, 5)
+Val BERT Shape: (116, 5)
+Test BERT Shape: (2767, 5)
+Emotion: surprise
+Train BERT Shape: (2768, 5)
+Val BERT Shape: (116, 5)
+Test BERT Shape: (2767, 5)
+Emotion: fear
+Train BERT Shape: (2768, 5)
+Val BERT Shape: (116, 5)
+Test BERT Shape: (2767, 5)
+Emotion: anger
+Train BERT Shape: (2768, 5)
+Val BERT Shape: (116, 5)
+Test BERT Shape: (2767, 5)
+
+
+/Users/angwang/miniforge3/lib/python3.12/site-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+
+Training model for joy
+Validation features shape for joy: torch.Size([116, 5])
+Training Loop (joy):   0%|          | 1/401 [00:00<02:45,  2.41it/s]
+Epoch 0 (joy):
+Training Loss: 0.8588, Validation Loss: 0.8130
+Macro F1: 0.7422
+
+New best model for joy at epoch 0 with F1: 0.7422
+Training Loop (joy):   1%|          | 3/401 [00:00<01:35,  4.18it/s]
+New best model for joy at epoch 1 with F1: 0.7459
+Training Loop (joy):   1%|          | 5/401 [00:01<01:10,  5.64it/s]
+New best model for joy at epoch 3 with F1: 0.7542
+
+New best model for joy at epoch 4 with F1: 0.7756
+Training Loop (joy):   3%|▎         | 12/401 [00:01<00:48,  7.96it/s]
+Epoch 10 (joy):
+Training Loss: 0.8056, Validation Loss: 0.8054
+Macro F1: 0.7502
+Training Loop (joy):   3%|▎         | 14/401 [00:02<01:04,  5.96it/s]
+/var/folders/sx/hkqgssrx0jd_jb2_792hz_hm0000gp/T/ipykernel_35135/3776244651.py:108: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(f'./model_checkpoints/{emotion}_best.pth')
+
+Early stopping triggered at epoch 14
+
+Loaded best model for joy from epoch 4 with F1: 0.7756
