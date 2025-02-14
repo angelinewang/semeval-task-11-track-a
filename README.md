@@ -106,3 +106,16 @@ Validation Set Performance:
    macro avg       0.46      0.79      0.58       176
 weighted avg       0.49      0.84      0.61       176
  samples avg       0.51      0.77      0.58       176
+
+## 14 Feb: Best Performing Model: pos-cv-thres-emolex-BERT-EMO
+Validation Set Performance:
+
+Evaluation scores (micro) for eng track a:
+Precision: 0.5897
+Recall: 0.7841
+F1 score: 0.6732
+
+Evaluation scores (macro) for eng track a:
+Precision: 0.6153
+Recall: 0.7321
+F1 score: 0.6549
