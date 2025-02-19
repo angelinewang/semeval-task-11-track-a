@@ -1,0 +1,13 @@
+/Users/angwang/semeval-task-11-track-a/results/test_predictions_dynamic_thresholds_2025-02-17_13_34_03.csv
+
+F1 Score: 0.5455
+
+Evaluation scores (micro) for eng track a:
+Precision: 0.5744
+Recall: 0.6729
+F1 score: 0.6198
+
+Evaluation scores (macro) for eng track a:
+Precision: 0.5291
+Recall: 0.5767
+F1 score: 0.5455

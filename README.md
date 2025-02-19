@@ -119,3 +119,18 @@ Evaluation scores (macro) for eng track a:
 Precision: 0.6153
 Recall: 0.7321
 F1 score: 0.6549
+
+Test Set Performance:
+
+Evaluation scores (micro) for eng track a:
+Precision: 0.5431
+Recall: 0.7106
+F1 score: 0.6157
+
+Evaluation scores (macro) for eng track a:
+Precision: 0.5243
+Recall: 0.6258
+**F1 score: 0.5541**
+
+Best Predictions so far: 
+/Users/angwang/semeval-task-11-track-a/results/test_predictions_dynamic_thresholds_2025-02-14_11_43_31.csv

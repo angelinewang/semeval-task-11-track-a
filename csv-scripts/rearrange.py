@@ -1,7 +1,7 @@
 import csv
 
-input_file = '/Users/angwang/semeval-task-11-track-b/results/track_a/pred_eng.csv'
-output_file = '/Users/angwang/semeval-task-11-track-b/results/track_a/pred_eng-new.csv'
+input_file = '/Users/angwang/semeval-task-11-track-a/post-hoc/results-2/track_a/pred_eng.csv'
+output_file = '/Users/angwang/semeval-task-11-track-a/post-hoc/results-2/track_a/pred_eng-new.csv'
 
 # Adjust these indices if your CSV has a header row or different column structure
 # Original indices:       [0, 1,       2,        3,         4,    5]
