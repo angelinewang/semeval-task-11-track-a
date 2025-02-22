@@ -10,7 +10,7 @@
 | BERT + Feat ENG    | **<u>0.6476</u>**(#4)     | 0.5457     |
 | BERT + Feat ENG + EMOLex    | **<u>0.6491</u>**(#3)     | 0.5538     |
 | BERT + Feat ENG + EMOLex + POS   | 0.6125     | 0.5542     |
-| **Emotion-Specific MLP (Emotion-Spec Thr)**     |||
+| **Emotion-Specific MLP (Emotion-Spec Thrs)**     |||
 | BERT   | **<u>0.6568</u>**(#2)     | 0.5364     |
 | BERT + Feat ENG   | **<u>0.6816</u>**(#1)     | 0.6079     |
 | BERT + Feat ENG + EmoLex   | 0.6433     | 0.5558     |
