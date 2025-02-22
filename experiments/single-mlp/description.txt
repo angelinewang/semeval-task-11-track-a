@@ -1,0 +1,8 @@
+Single MLP For All Emotions
+0.5 Emotion Detection Threshold For All Emotions 
+
+Variations:
+1. BERT (Baseline)
+2. BERT + Feature Engineering: Bert features stacked with feature engineered features  
+3. BERT + Feature Engineering + EmoLex Words
+4. BERT + Feature Engineering + EmoLex Words + POS Embeddings 

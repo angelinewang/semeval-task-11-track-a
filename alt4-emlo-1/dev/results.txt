@@ -1,0 +1,9 @@
+Evaluation scores (micro) for eng track a:
+Precision: 0.3563
+Recall: 0.5
+F1 score: 0.4161
+
+Evaluation scores (macro) for eng track a:
+Precision: 0.3273
+Recall: 0.4501
+F1 score: 0.3654

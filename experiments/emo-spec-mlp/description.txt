@@ -1,0 +1,8 @@
+Emotion-Specific Multi-Layer Perceptrons
+0.5 Detection Threshold For All Emotions
+
+Variations:
+1. BERT
+2. BERT + Feature Engineering 
+3. BERT + Feature Engineering + EmoLex Words
+4. BERT + Feature Engineering + EmoLex Words + POS Embeddings 
