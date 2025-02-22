@@ -6,3 +6,5 @@ Variations:
 2. BERT + Feature Engineering 
 3. BERT + Feature Engineering + EmoLex Words
 4. BERT + Feature Engineering + EmoLex Words + POS Embeddings (Final Model)
+
+Emotion-Specific Detection Thresholds are based on binary F1s, since it is just about within the one emotion.
