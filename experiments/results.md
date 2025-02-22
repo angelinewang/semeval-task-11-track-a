@@ -7,8 +7,8 @@
 | BERT + Feat ENG + EMOLex + POS    | 0.5785     | 0.5547     |
 | Emotion-Specific MLP (0.5 Thrs)    |
 | BERT    | 0.6162     | 0.5434     |
-| BERT + Feat ENG    | Data     | Data     |
-| BERT + Feat ENG + EMOLex    | Data     | Data     |
+| BERT + Feat ENG    | 0.6476     | 0.5457     |
+| BERT + Feat ENG + EMOLex    | 0.6491     | 0.5538     |
 | BERT + Feat ENG + EMOLex + POS   | Data     | Data     |
 | Emotion-Specific MLP (Emotion-Spec Thr)     |
 | BERT   | Data     | Data     |
@@ -17,3 +17,5 @@
 | BERT + Feat ENG + EMOLex + POS (Final Model)   | Data     | Data     |
 
 Results went down with POS tags.
+
+Emo-Spec MLP 0.5 BERT + Feat ENG AND BERT + Feat ENG + EMOLex performed better than final model on Dev set, but performed worse on Test set.
