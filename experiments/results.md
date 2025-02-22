@@ -19,3 +19,5 @@
 Results went down with POS tags.
 
 Emo-Spec MLP 0.5 BERT + Feat ENG AND BERT + Feat ENG + EMOLex performed better than final model on Dev set, but performed worse on Test set.
+
+Random Seed: 22
