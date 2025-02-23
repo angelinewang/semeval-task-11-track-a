@@ -6,20 +6,17 @@ import numpy as np
 from scipy import stats
 
 # Load the data
-train = pd.read_csv('/Users/angwang/semeval-task-11-track-b/public_data_test/track_a/train/eng.csv')
-val = pd.read_csv('/Users/angwang/semeval-task-11-track-b/public_data_test/track_a/dev/eng.csv')
-test = pd.read_csv('/Users/angwang/semeval-task-11-track-b/public_data_test/track_a/test/eng.csv')
-
+train = pd.read_csv('/Users/angwang/semeval-task-11-track-a/post-hoc/final-datasets/track_a/train/eng.csv')
 # Define emotions
 emotions = ['anger', 'fear', 'joy', 'sadness', 'surprise']
 
 # Define the optimal thresholds found (from your notebook)
 optimal_thresholds = {
-    'joy': 0.500,      # These values are approximated from your plots
-    'sadness': 0.600,  # You may want to replace these with the exact values
-    'surprise': 0.400,
-    'fear': 0.350,
-    'anger': 0.650
+    'joy': 0.450,      # These values are approximated from your plots
+    'sadness': 0.550,  # You may want to replace these with the exact values
+    'surprise': 0.200,
+    'fear': 0.500,
+    'anger': 0.600
 }
 
 # Calculate proportion for each emotion in each dataset
@@ -30,8 +27,6 @@ def calculate_proportions(df):
     return proportions
 
 train_props = calculate_proportions(train)
-val_props = calculate_proportions(val)
-test_props = calculate_proportions(test)
 
 # Create the visualization
 plt.figure(figsize=(15, 12))
@@ -73,6 +68,11 @@ for emotion in emotions:
         offset_y = -50   # Move label below
     if y < 0.2 * ymax:  # Points near bottom
         offset_y = 70    # Move label higher up
+    
+    # Special adjustment for 'fear' label
+    if emotion == 'fear':
+        offset_x = -150  # Move fear label to the left
+        offset_y = 70    # Move fear label higher up
         
     # Capitalize only for display
     display_emotion = emotion.capitalize()
@@ -108,7 +108,7 @@ plt.yticks(fontsize=55)
 # Add padding to prevent text cutoff
 plt.tight_layout(pad=2.0)
 
-plt.savefig('/Users/angwang/semeval-task-11-track-b/results/train_emotion_threshold_analysis.png', dpi=300, bbox_inches='tight')
+plt.savefig('/Users/angwang/semeval-task-11-track-a/experiments/train_emotion_threshold_analysis.png', dpi=300, bbox_inches='tight')
 plt.show()
 
 # Print correlation analysis only for training set
