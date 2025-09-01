@@ -277,10 +277,8 @@ model = nn.Sequential(
     nn.Linear(64, 5)
 )
 
-# Training loop for each emotion
-# for emotion in emotions:
+# Training loop 
 print(f"\nTraining model for all emotions on BERT predictions")
-model = model
 model.train()  # Add this to explicitly set training mode
 
 # Prepare data for this emotion
@@ -409,20 +407,9 @@ def save_predictions(predictions, ids, filename):
     df_predictions.to_csv(filename, index=False)
     print(f"Saved predictions to {filename}")
 
-# Save validation and test predictions
-from datetime import datetime
-timestamp = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
-
-# After training loop finishes for all emotions...
-
 # Make predictions for each emotion using best models
 print("\nGenerating predictions for all emotions...")
-val_preds = {}
-test_preds = {}
 
-model = model
-checkpoint = torch.load(f'./model_checkpoints/best-model.pth')
-model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()  # Set to evaluation mode
 
 print(f"Using best model for all emotions on BERT predictions from epoch {checkpoint['epoch']} with F1: {checkpoint['f1']:.3f}")
@@ -455,7 +442,6 @@ print(f"\nBest Results for all emotions on BERT predictions:")
 print(f"Threshold: 0.5")
 
 # Generate final predictions using threshold of 0.5
-val_binary_preds = (val_probs > 0.5).astype(int)  # Direct assignment instead of zeros
 test_binary_preds = (test_probs > 0.5).astype(int)  # Direct assignment instead of zeros
 
 # Print detailed performance report
@@ -475,7 +461,7 @@ print(classification_report(
     digits=4
 ))
 
-# Save predictions
+from datetime import datetime
 timestamp = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
 
 # Save validation predictions

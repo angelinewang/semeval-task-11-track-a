@@ -417,7 +417,6 @@ timestamp = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
 # After training loop finishes for all emotions...
 
 # Make predictions for each emotion using best models
-# print("\nGenerating predictions for {emotion}...")
 val_preds = {}
 test_preds = {}
 
@@ -461,10 +460,8 @@ results.append({
 results_df = pd.DataFrame(results)
 print(f"\nBest Results for Emotion Specific MLPs on BERT predictions:")
 print(f"Threshold: 0.5")
-# print(f"Best Macro F1: {best_macro_f1s[emotion]:.3f}")
 
 # Generate final predictions using threshold of 0.5
-val_binary_preds = (val_probs > 0.5).astype(int)  # Direct assignment instead of zeros
 test_binary_preds = (test_probs > 0.5).astype(int)  # Direct assignment instead of zeros
 
 # Print detailed performance report
@@ -483,10 +480,6 @@ print(classification_report(
     target_names=emotions,
     digits=4
 ))
-
-
-# Save predictions
-timestamp = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
 
 # Save validation predictions
 save_predictions(

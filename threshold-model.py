@@ -18,40 +18,17 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from sklearn.metrics import f1_score, classification_report
 
 # Create necessary directories only if they don't exist
-model_checkpoints_dir = './model_checkpoints'
-results_dir = './results'
-
-# Get absolute paths
-current_dir = os.getcwd()
-model_checkpoints_abs = os.path.join(current_dir, 'model_checkpoints')
-results_abs = os.path.join(current_dir, 'results')
-
-print(f"Current working directory: {current_dir}")
-print(f"Model checkpoints directory: {model_checkpoints_abs}")
-print(f"Results directory: {results_abs}")
-
-if not os.path.exists(model_checkpoints_dir):
-    os.makedirs(model_checkpoints_dir)
-    print(f"Created model_checkpoints directory at: {model_checkpoints_abs}")
+if not os.path.exists('./model_checkpoints'):
+    os.makedirs('./model_checkpoints')
+    print("Created model_checkpoints directory")
 else:
-    print(f"model_checkpoints directory already exists at: {model_checkpoints_abs}")
+    print("model_checkpoints directory already exists")
 
-if not os.path.exists(results_dir):
-    os.makedirs(results_dir)
-    print(f"Created results directory at: {results_abs}")
+if not os.path.exists('./results'):
+    os.makedirs('./results')
+    print("Created results directory")
 else:
-    print(f"results directory already exists at: {results_abs}")
-
-# Verify directories exist
-if os.path.exists(model_checkpoints_dir):
-    print(f"✓ model_checkpoints directory verified: {os.path.abspath(model_checkpoints_dir)}")
-else:
-    print(f"✗ ERROR: model_checkpoints directory not found!")
-    
-if os.path.exists(results_dir):
-    print(f"✓ results directory verified: {os.path.abspath(results_dir)}")
-else:
-    print(f"✗ ERROR: results directory not found!")
+    print("results directory already exists")
 
 # Load data
 train = pd.read_csv('./final-datasets/track_a/train/eng.csv')
@@ -384,11 +361,6 @@ for emotion in emotions:
         if macro_f1 > best_f1:
             best_f1 = macro_f1
             
-            # Ensure model_checkpoints directory exists before saving
-            if not os.path.exists('./model_checkpoints'):
-                print("Creating model_checkpoints directory before saving...")
-                os.makedirs('./model_checkpoints')
-            
             save_path = f'./model_checkpoints/threshold-best-{emotion}-model.pth'
             print(f"Saving model to: {os.path.abspath(save_path)}")
             
@@ -447,10 +419,8 @@ def save_predictions(predictions, ids, filename):
 # Save validation and test predictions
 from datetime import datetime
 timestamp = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
-# After training loop finishes for all emotions...
 
 # Make predictions for each emotion using best models
-# print("\nGenerating predictions for {emotion}...")
 val_preds = {}
 test_preds = {}
 
@@ -508,7 +478,7 @@ for i, emotion in enumerate(emotions):
     # Convert results to DataFrame and display
     results_df = pd.DataFrame(results)
     print(f"\nBest Results for {emotion}:")
-    print(f"\nBest Results for Emotion Specific MLPs on BERT predictions:")
+    print(f"\nEmotion Specific MLPs on BERT predictions:")
     print(f"Best Threshold: {best_thresholds[emotion]:.4f}")
     print(f"Best Binary F1: {best_binary_f1s[emotion]:.3f}")
     # print(f"Best Macro F1: {best_macro_f1s[emotion]:.3f}")
@@ -550,15 +520,6 @@ print(classification_report(
     target_names=emotions,
     digits=4
 ))
-
-
-# Save predictions
-timestamp = datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
-
-# Ensure results directory exists before saving
-if not os.path.exists('./results'):
-    print("Creating results directory before saving predictions...")
-    os.makedirs('./results')
 
 # Save validation predictions
 val_save_path = f'./results/threshold-val-{timestamp}.csv'
